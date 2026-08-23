@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nermine Touati | Pharmaceutical Quality & QHSE Professional</title>
+  <meta name="description" content="Portfolio of Nermine Touati - Quality professional combining pharmaceutical expertise, QHSE management, GMP knowledge, and continuous improvement.">
+  <meta name="keywords" content="Nermine Touati, Pharmaceutical Quality, QHSE, GMP, BPF, CAPA, SAGE X3, Qualipro, Sartorius Biotech, SAIPH, TERIAK">
+
+  <!-- Google Fonts (Inter & Outfit) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pharma: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            biotech: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+            },
+            emerald: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-100 selection:text-sky-900">
+
+  <!-- Scientific Dynamic Background Canvas -->
+  <canvas id="bg-molecules-canvas" aria-hidden="true"></canvas>
+
+  <!-- Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- Sticky Navigation Bar -->
+    <header id="main-navbar" class="navbar-glass">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Brand Logo -->
+          <a href="#hero" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 via-teal-500 to-emerald-500 p-[2px] shadow-sm group-hover:shadow-md transition-all">
+              <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center text-sky-600 font-bold font-heading text-lg">
+                NT
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-heading font-extrabold text-slate-900 text-lg tracking-tight group-hover:text-sky-600 transition-colors">
+                Nermine Touati
+              </span>
+              <span class="text-[11px] font-medium text-slate-500 tracking-wider uppercase">
+                Pharma Quality &bull; QHSE
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <nav class="hidden lg:flex items-center gap-1">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#methodology" class="nav-link">Quality Approach</a>
+            <a href="#environment" class="nav-link">Pharma Lab</a>
+            <a href="#education" class="nav-link">Education & Certs</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+
+          <!-- Desktop Quick Actions -->
+          <div class="hidden sm:flex items-center gap-3">
+            <button class="open-cv-modal-btn btn-secondary text-xs sm:text-sm !py-2 !px-4">
+              <i data-lucide="file-text" class="w-4 h-4 text-sky-600"></i>
+              <span>Executive CV</span>
+            </button>
+            <a href="#contact" class="btn-primary text-xs sm:text-sm !py-2 !px-4 shadow-sm">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors" aria-label="Open Navigation Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 pointer-events-none lg:hidden" aria-hidden="true">
+      <!-- Backdrop -->
+      <div id="mobile-menu-close" class="absolute inset-0 bg-slate-900/30 backdrop-blur-sm pointer-events-auto"></div>
+      
+      <!-- Drawer Content -->
+      <div class="absolute right-0 top-0 bottom-0 w-4/5 max-w-sm bg-white/95 backdrop-blur-xl shadow-2xl p-6 flex flex-col justify-between pointer-events-auto border-l border-slate-200">
+        <div>
+          <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-sm">
+                NT
+              </div>
+              <span class="font-heading font-bold text-slate-900">Nermine Touati</span>
+            </div>
+            <button class="p-2 text-slate-400 hover:text-slate-600" onclick="document.getElementById('mobile-menu-close').click()">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+
+          <nav class="flex flex-col gap-2 mt-6">
+            <a href="#hero" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="home" class="w-4 h-4"></i> Home
+            </a>
+            <a href="#about" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="user-check" class="w-4 h-4"></i> About Me
+            </a>
+            <a href="#experience" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="briefcase" class="w-4 h-4"></i> Experience
+            </a>
+            <a href="#skills" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="layers" class="w-4 h-4"></i> Skill Ecosystem
+            </a>
+            <a href="#methodology" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i> Quality Approach
+            </a>
+            <a href="#environment" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="flask-conical" class="w-4 h-4"></i> Pharma Environment
+            </a>
+            <a href="#education" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i> Education & Certs
+            </a>
+            <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-sky-600 font-medium">
+              <i data-lucide="send" class="w-4 h-4"></i> Contact
+            </a>
+          </nav>
+        </div>
+
+        <div class="pt-6 border-t border-slate-100 flex flex-col gap-3">
+          <button class="open-cv-modal-btn btn-secondary w-full justify-center !py-2.5">
+            <i data-lucide="file-text" class="w-4 h-4 text-sky-600"></i>
+            <span>Executive Resume</span>
+          </button>
+          <a href="#contact" class="btn-primary w-full justify-center !py-2.5" onclick="document.getElementById('mobile-menu-close').click()">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- ===================================================================
+           1. HERO SECTION
+           =================================================================== -->
+      <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <!-- Left Hero Text Column -->
+            <div class="lg:col-span-7 flex flex-col items-start reveal">
+              
+              <!-- Professional Badges -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 shadow-sm mb-6">
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-xs font-semibold text-sky-900 tracking-wide">
+                  Pharmaceutical Quality | QHSE | GMP | Continuous Improvement
+                </span>
+              </div>
+
+              <!-- Main Name & Title -->
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12] mb-4">
+                Nermine Touati
+              </h1>
+
+              <div class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-sky-600 via-teal-600 to-emerald-600 bg-clip-text text-transparent mb-6">
+                Pharmaceutical Quality & QHSE Professional
+              </div>
+
+              <!-- Supporting Text -->
+              <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mb-8">
+                Quality professional combining pharmaceutical expertise, QHSE management, GMP knowledge, and continuous improvement to support reliable, compliant, and efficient pharmaceutical operations.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+                <a href="#experience" class="btn-primary w-full sm:w-auto">
+                  <i data-lucide="briefcase" class="w-4 h-4"></i>
+                  <span>View My Experience</span>
+                </a>
+                <a href="#contact" class="btn-secondary w-full sm:w-auto">
+                  <i data-lucide="mail" class="w-4 h-4 text-sky-600"></i>
+                  <span>Contact Me</span>
+                </a>
+                <button class="open-cv-modal-btn btn-secondary w-full sm:w-auto">
+                  <i data-lucide="file-check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Resume Dossier</span>
+                </button>
+              </div>
+
+              <!-- Key Metric Badges -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-xl">
+                <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm backdrop-blur-sm">
+                  <div class="flex items-center gap-2 text-sky-600 mb-1">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Compliance</span>
+                  </div>
+                  <div class="text-sm font-semibold text-slate-800">100% GMP / BPF</div>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm backdrop-blur-sm">
+                  <div class="flex items-center gap-2 text-teal-600 mb-1">
+                    <i data-lucide="git-merge" class="w-4 h-4"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Methodology</span>
+                  </div>
+                  <div class="text-sm font-semibold text-slate-800">CAPA & RCA Expert</div>
+                </div>
+
+                <div class="col-span-2 sm:col-span-1 p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm backdrop-blur-sm">
+                  <div class="flex items-center gap-2 text-emerald-600 mb-1">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">ERP & QMS</span>
+                  </div>
+                  <div class="text-sm font-semibold text-slate-800">SAGE X3 & Qualipro</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Hero Visual Column (Interactive Scientific Card) -->
+            <div class="lg:col-span-5 flex justify-center reveal reveal-delay-1">
+              <div class="relative w-full max-w-md">
+                
+                <!-- Glow backing -->
+                <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-teal-400 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+
+                <!-- Main Visual Glass Card -->
+                <div class="relative glass-card-accent p-6 sm:p-8 bg-white/90">
+                  
+                  <!-- Top Scientific Header -->
+                  <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                    <div class="flex items-center gap-2">
+                      <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                      <span class="text-xs font-bold tracking-wider uppercase text-slate-600">Active Pharma QMS Node</span>
+                    </div>
+                    <span class="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200">
+                      ISO 17025 / BPF
+                    </span>
+                  </div>
+
+                  <!-- Central Animated Molecule / Scientific Graphic -->
+                  <div class="relative flex items-center justify-center my-6 py-4">
+                    
+                    <!-- Pulsing background ring -->
+                    <div class="absolute w-44 h-44 rounded-full border border-sky-200/60 animate-pulse-ring"></div>
+                    <div class="absolute w-60 h-60 rounded-full border border-teal-200/40 animate-pulse-ring" style="animation-delay: 1.5s;"></div>
+
+                    <!-- Center Molecular Hexagon Graphic (SVG) -->
+                    <div class="relative z-10 w-36 h-36 rounded-2xl bg-gradient-to-tr from-sky-600 via-teal-600 to-emerald-500 p-0.5 shadow-xl animate-float">
+                      <div class="w-full h-full bg-white rounded-[14px] flex flex-col items-center justify-center p-3 text-center">
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600 mb-2">
+                          <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-extrabold text-slate-800 uppercase tracking-tight">Quality Assurance</span>
+                        <span class="text-[10px] text-slate-500 font-medium">Batch Release & Compliance</span>
+                      </div>
+                    </div>
+
+                    <!-- Satellite Nodes -->
+                    <div class="absolute -top-2 left-6 px-2.5 py-1 rounded-lg bg-white shadow-md border border-slate-100 text-[11px] font-semibold text-slate-700 flex items-center gap-1.5 animate-float-delayed">
+                      <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                      <span>Batch Certification</span>
+                    </div>
+
+                    <div class="absolute -bottom-2 right-4 px-2.5 py-1 rounded-lg bg-white shadow-md border border-slate-100 text-[11px] font-semibold text-slate-700 flex items-center gap-1.5 animate-float">
+                      <i data-lucide="activity" class="w-3.5 h-3.5 text-sky-500"></i>
+                      <span>Deviation RCA</span>
+                    </div>
+
+                    <div class="absolute top-1/2 -left-4 -translate-y-1/2 px-2.5 py-1 rounded-lg bg-white shadow-md border border-slate-100 text-[11px] font-semibold text-slate-700 flex items-center gap-1.5">
+                      <i data-lucide="dna" class="w-3.5 h-3.5 text-teal-600"></i>
+                      <span>Biotech QA</span>
+                    </div>
+                  </div>
+
+                  <!-- Live Quality Assurance Quick Summary -->
+                  <div class="space-y-2.5 pt-4 border-t border-slate-100">
+                    <div class="flex items-center justify-between text-xs">
+                      <span class="text-slate-500">Regulatory Framework</span>
+                      <span class="font-semibold text-slate-800">GMP (BPF) &bull; GDP &bull; ALCOA+</span>
+                    </div>
+                    <div class="flex items-center justify-between text-xs">
+                      <span class="text-slate-500">Core Industrial Scope</span>
+                      <span class="font-semibold text-slate-800">SAIPH &bull; TERIAK &bull; Sartorius</span>
+                    </div>
+                    <div class="flex items-center justify-between text-xs">
+                      <span class="text-slate-500">Academic Specialization</span>
+                      <span class="font-semibold text-slate-800">Master QHSE &bull; Med Biotech</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           2. ABOUT SECTION
+           =================================================================== -->
+      <section id="about" class="py-20 relative bg-white/60 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16 reveal">
+            <div class="section-badge">
+              <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+              Professional Profile
+            </div>
+            <h2 class="section-title">About Nermine Touati</h2>
+            <p class="section-subtitle">
+              A polyvalent pharmaceutical quality specialist merging robust biotechnology engineering with rigorous industrial QHSE standards and continuous process improvement.
+            </p>
+          </div>
+
+          <!-- Dual Column Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Column: Scientific & Quality Pillars Diagram -->
+            <div class="lg:col-span-5 reveal">
+              <div class="glass-card p-6 sm:p-8 bg-gradient-to-br from-white via-sky-50/40 to-teal-50/30">
+                <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
+                  <i data-lucide="layers" class="w-5 h-5 text-sky-600"></i>
+                  The 4 Pillars of My Expertise
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Synthesizing laboratory precision with pharmaceutical manufacturing compliance.
+                </p>
+
+                <div class="space-y-4">
+                  
+                  <!-- Pillar 1 -->
+                  <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-sky-300 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-sky-100/80 flex items-center justify-center text-sky-700 shrink-0">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-bold text-slate-900">Pharmaceutical Quality & GMP/BPF</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                          Comprehensive batch dossier evaluations, batch release authorization, inspection reports, and strict Good Manufacturing Practices compliance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pillar 2 -->
+                  <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-teal-300 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-teal-100/80 flex items-center justify-center text-teal-700 shrink-0">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-bold text-slate-900">Root-Cause Analysis & CAPA</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                          Systematic investigation of deviations, non-conformities, and customer complaints utilizing 5 Whys, Ishikawa (5M), 8D, and validated CAPA plans.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pillar 3 -->
+                  <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-emerald-300 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-emerald-100/80 flex items-center justify-center text-emerald-700 shrink-0">
+                        <i data-lucide="check-square" class="w-5 h-5"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-bold text-slate-900">Integrated QHSE & Auditing</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                          Risk-oriented thinking, internal quality & environmental audits, workplace safety, and change control management across multi-site production facilities.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pillar 4 -->
+                  <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-cyan-300 transition-colors">
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-lg bg-cyan-100/80 flex items-center justify-center text-cyan-700 shrink-0">
+                        <i data-lucide="dna" class="w-5 h-5"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-bold text-slate-900">Biotechnology & Analytical Precision</h4>
+                        <p class="text-xs text-slate-600 mt-1">
+                          Solid academic foundation in Medical Biotechnology and Molecular Engineering, mastering single-use systems, chromatography (CHROMAS), and ISO 17025.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right Column: Narrative & Key Profile Highlights -->
+            <div class="lg:col-span-7 flex flex-col gap-6 reveal reveal-delay-1">
+              
+              <div class="space-y-4 text-slate-700 text-base leading-relaxed">
+                <p>
+                  As a dedicated <strong>Pharmaceutical Quality and QHSE professional</strong>, I specialize in establishing, managing, and sustaining highest-standard quality management systems within competitive pharmaceutical manufacturing and biotechnology environments.
+                </p>
+                <p>
+                  With rich hands-on operational experience across leading pharmaceutical laboratories—including <strong>SAIPH</strong>, <strong>TERIAK</strong>, and <strong>Sartorius Stedim BIOTECH</strong>—I ensure that every commercial batch released satisfies uncompromising standards of safety, efficacy, and regulatory compliance.
+                </p>
+                <p>
+                  My dual background combines an advanced <strong>Master's Degree in Integrated QHSE Management</strong> with an <strong>Applied Bachelor's in Medical Biotechnology</strong>, providing me with both deep scientific comprehension of active biological and chemical ingredients and strategic mastery of quality tools, ERP systems (<strong>SAGE X3, SAP</strong>), and QMS software (<strong>Qualipro</strong>).
+                </p>
+              </div>
+
+              <!-- Competencies Grid Badges -->
+              <div class="pt-4">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+                  Core Operational Competencies
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600"></i> Batch Dossier Evaluation</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600"></i> GMP / BPF Compliance</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-600"></i> Deviation Management</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-600"></i> CAPA Design & Execution</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Root-Cause Analysis (5 Whys / Ishikawa)</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Change Control</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600"></i> Pharmaceutical Complaints</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-sky-600"></i> Internal & Supplier Audits</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-600"></i> SAGE X3 & Qualipro QMS</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-teal-600"></i> Data Integrity (ALCOA+)</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Line Clearance & Inspection</span>
+                  <span class="btn-pill"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Quality Training & Culture</span>
+                </div>
+              </div>
+
+              <!-- Personal Quality Philosophy Quote -->
+              <div class="p-4 rounded-xl bg-sky-50/70 border-l-4 border-sky-600 text-slate-700 italic text-sm">
+                "Quality in the pharmaceutical industry is not merely a checkpoint—it is an intrinsic commitment to patient well-being, sustained through systematic investigation, continuous improvement, and flawless regulatory discipline."
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           3. PROFESSIONAL EXPERIENCE (INTERACTIVE TIMELINE)
+           =================================================================== -->
+      <section id="experience" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16 reveal">
+            <div class="section-badge">
+              <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+              Career Trajectory
+            </div>
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">
+              A proven track record of quality assurance, batch certification, deviation management, and continuous improvement across leading pharmaceutical and biotech organizations.
+            </p>
+          </div>
+
+          <!-- Timeline Container -->
+          <div class="relative timeline-track max-w-4xl mx-auto space-y-12">
+            
+            <!-- EXPERIENCE 1: SAIPH -->
+            <div class="relative pl-12 lg:pl-0 exp-card reveal">
+              <div class="timeline-node"></div>
+              
+              <div class="glass-card p-6 sm:p-8 hover:shadow-xl transition-all border-l-4 border-l-sky-600 lg:w-[92%] lg:ml-auto">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <div>
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-sky-100 text-sky-800 mb-1">
+                      Current Position
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading">
+                      Chargée Assurance Qualité
+                    </h3>
+                    <div class="text-base font-semibold text-sky-700 flex items-center gap-1.5">
+                      <i data-lucide="building-2" class="w-4 h-4"></i>
+                      Laboratoires SAIPH (Société Arabe des Industries Pharmaceutiques)
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg shrink-0 self-start sm:self-auto">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-sky-600"></i>
+                    <span>August 2022 – Present</span>
+                  </div>
+                </div>
+
+                <!-- Primary Responsibilities Summary -->
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                  Leading quality assurance oversight, batch dossier validation, and packaging release workflows in compliance with European and National GMP/BPF guidelines.
+                </p>
+
+                <!-- Core Highlights Checklist -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 text-xs text-slate-700">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Batch Dossier Evaluation:</strong> Systematic verification of manufacturing and packaging records.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Batch Release Planning:</strong> Coordinating release timelines with production and supply chain.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>SAGE X3 Material Tracking:</strong> Monitoring component consumption and yield reconciliations.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Qualipro QMS Management:</strong> Registering inspection reports, complaints, and CAPA.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Root-Cause Analysis (RCA):</strong> Executing 5 Whys and Ishikawa diagrams on packaging discrepancies.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Pharma Complaint Management:</strong> Rigorous investigation and response to customer feedback.</span>
+                  </div>
+                </div>
+
+                <!-- Expandable Technical Details Drawer -->
+                <div class="exp-details hidden pt-4 border-t border-slate-100 mt-4 space-y-3">
+                  <div class="p-3.5 rounded-lg bg-sky-50/50 border border-sky-100 text-xs text-slate-700 space-y-2">
+                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                      <i data-lucide="database" class="w-3.5 h-3.5"></i>
+                      Systems & Standards Applied at SAIPH:
+                    </div>
+                    <p>
+                      <strong>Enterprise Software:</strong> SAGE X3 ERP (material movements, reconciliation reports, quarantine flags), Qualipro QMS (deviation tracking, customer complaints, document control).
+                    </p>
+                    <p>
+                      <strong>Key Achievements:</strong> Enhanced batch record approval turnarounds by standardizing dossier pre-audit checks and resolving critical packaging deviations with zero recurrence.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Footer Tags & Expand Toggle Button -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">SAGE X3</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Qualipro</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Batch Release</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">RCA</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">GMP/BPF</span>
+                  </div>
+
+                  <button class="exp-expand-btn text-xs font-semibold text-sky-600 hover:text-sky-800 flex items-center gap-1">
+                    <span class="btn-text">View Technical Details & Tools</span>
+                    <i data-lucide="chevron-down" class="w-3.5 h-3.5 exp-chevron transition-transform duration-200"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- EXPERIENCE 2: TERIAK -->
+            <div class="relative pl-12 lg:pl-0 exp-card reveal">
+              <div class="timeline-node" style="border-color: #0d9488;"></div>
+              
+              <div class="glass-card p-6 sm:p-8 hover:shadow-xl transition-all border-l-4 border-l-teal-600 lg:w-[92%] lg:ml-auto">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading">
+                      Chargée Qualité Production
+                    </h3>
+                    <div class="text-base font-semibold text-teal-700 flex items-center gap-1.5">
+                      <i data-lucide="building-2" class="w-4 h-4"></i>
+                      Laboratoires TERIAK
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg shrink-0 self-start sm:self-auto">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-teal-600"></i>
+                    <span>August 2021 – August 2022</span>
+                  </div>
+                </div>
+
+                <!-- Primary Responsibilities Summary -->
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                  Supervised in-process quality control, deviation investigations, change control, and operator training across active solid and liquid pharmaceutical production lines.
+                </p>
+
+                <!-- Core Highlights Checklist -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 text-xs text-slate-700">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Deviations Management:</strong> Real-time containment and logging of production line anomalies.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Root-Cause Investigations:</strong> Leading multidisciplinary 5M / 8D problem-solving teams.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>CAPA Coordination:</strong> Formulating actionable corrective measures and tracking closure rates.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Quality Awareness & Training:</strong> Training manufacturing operators on GMP hygiene and SOPs.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Change Management:</strong> Evaluating quality risks associated with equipment and process updates.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Internal Audits:</strong> Conducting shopfloor audits and tracking corrective action plans.</span>
+                  </div>
+                </div>
+
+                <!-- Expandable Technical Details Drawer -->
+                <div class="exp-details hidden pt-4 border-t border-slate-100 mt-4 space-y-3">
+                  <div class="p-3.5 rounded-lg bg-teal-50/50 border border-teal-100 text-xs text-slate-700 space-y-2">
+                    <div class="font-bold text-teal-900 flex items-center gap-1.5">
+                      <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+                      Methodology & Impact at TERIAK:
+                    </div>
+                    <p>
+                      <strong>Problem Solving Tools:</strong> Ishikawa (Fishbone diagram), 5 Whys, 8D Problem Solving Methodology, Risk Assessment Matrix (FMEA).
+                    </p>
+                    <p>
+                      <strong>Key Achievements:</strong> Reduced recurring line clearance deviations by 30% through targeted operator visual inspection workshops and updated standard operating procedures (SOPs).
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Footer Tags & Expand Toggle Button -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Production QA</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">CAPA</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Change Management</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Internal Audits</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Operator Training</span>
+                  </div>
+
+                  <button class="exp-expand-btn text-xs font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
+                    <span class="btn-text">View Technical Details & Tools</span>
+                    <i data-lucide="chevron-down" class="w-3.5 h-3.5 exp-chevron transition-transform duration-200"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- EXPERIENCE 3: SARTORIUS STEDIM BIOTECH -->
+            <div class="relative pl-12 lg:pl-0 exp-card reveal">
+              <div class="timeline-node" style="border-color: #059669;"></div>
+              
+              <div class="glass-card p-6 sm:p-8 hover:shadow-xl transition-all border-l-4 border-l-emerald-600 lg:w-[92%] lg:ml-auto">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                  <div>
+                    <h3 class="text-xl font-bold text-slate-900 font-heading">
+                      Chargée Qualité Libération Produits
+                    </h3>
+                    <div class="text-base font-semibold text-emerald-700 flex items-center gap-1.5">
+                      <i data-lucide="building-2" class="w-4 h-4"></i>
+                      Sartorius Stedim BIOTECH
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg shrink-0 self-start sm:self-auto">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-600"></i>
+                    <span>Biotechnology & Single-Use QA</span>
+                  </div>
+                </div>
+
+                <!-- Primary Responsibilities Summary -->
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                  Conducted product release, raw-material verification, batch certification, and inter-site complaint resolution for high-end biopharmaceutical single-use technologies.
+                </p>
+
+                <!-- Core Highlights Checklist -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6 text-xs text-slate-700">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Raw-Material Release:</strong> Rigorous quality inspection and certificate of analysis (CoA) validation.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Product Certification:</strong> Semi-finished and finished product batch release authorization.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>GMP / BPF Compliance:</strong> Ensuring full adherence to sterile biomanufacturing guidelines.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Production Inspections:</strong> Cleanroom walk-throughs and sterile barrier integrity monitoring.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Deviation Monitoring:</strong> Quarantine protocol enforcement and non-conformity documentation.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                    <span><strong>Inter-Site Complaints:</strong> Cross-plant investigation and resolution of international product claims.</span>
+                  </div>
+                </div>
+
+                <!-- Expandable Technical Details Drawer -->
+                <div class="exp-details hidden pt-4 border-t border-slate-100 mt-4 space-y-3">
+                  <div class="p-3.5 rounded-lg bg-emerald-50/50 border border-emerald-100 text-xs text-slate-700 space-y-2">
+                    <div class="font-bold text-emerald-900 flex items-center gap-1.5">
+                      <i data-lucide="dna" class="w-3.5 h-3.5"></i>
+                      Biotechnology Environment & Standards:
+                    </div>
+                    <p>
+                      <strong>Scope of Technologies:</strong> Single-use bioprocessing bags, sterile fluid transfer sets, membrane filtration capsules, bioreactor sensors.
+                    </p>
+                    <p>
+                      <strong>Regulatory Standards:</strong> ISO 9001, ISO 13485, cGMP Part 210/211, USP Biological Reactivity & Particulate Matter standards.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Footer Tags & Expand Toggle Button -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-100">
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Biotech QA</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Batch Certification</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Raw Material Release</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Inter-Site QA</span>
+                    <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">Cleanroom Standards</span>
+                  </div>
+
+                  <button class="exp-expand-btn text-xs font-semibold text-emerald-600 hover:text-emerald-800 flex items-center gap-1">
+                    <span class="btn-text">View Technical Details & Tools</span>
+                    <i data-lucide="chevron-down" class="w-3.5 h-3.5 exp-chevron transition-transform duration-200"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           4. SKILLS SECTION (INTERACTIVE ECOSYSTEM)
+           =================================================================== -->
+      <section id="skills" class="py-20 relative bg-white/60 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-12 reveal">
+            <div class="section-badge">
+              <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+              Core Competencies
+            </div>
+            <h2 class="section-title">Interactive Skill Ecosystem</h2>
+            <p class="section-subtitle">
+              An integrated multidimensional framework encompassing pharmaceutical quality assurance, integrated QHSE systems, continuous improvement tools, and enterprise digital solutions.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center justify-center gap-2 mb-12 reveal">
+            <button data-skill-category="all" class="skill-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-white text-sky-700 shadow-md border-sky-300">
+              All Competencies
+            </button>
+            <button data-skill-category="pharma" class="skill-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-100/80 text-slate-600 border-transparent hover:bg-slate-200/60">
+              Pharmaceutical Quality
+            </button>
+            <button data-skill-category="qhse" class="skill-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-100/80 text-slate-600 border-transparent hover:bg-slate-200/60">
+              QHSE Management
+            </button>
+            <button data-skill-category="improvement" class="skill-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-100/80 text-slate-600 border-transparent hover:bg-slate-200/60">
+              Continuous Improvement
+            </button>
+            <button data-skill-category="digital" class="skill-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-100/80 text-slate-600 border-transparent hover:bg-slate-200/60">
+              Digital & Analytical Tools
+            </button>
+          </div>
+
+          <!-- Skills Ecosystem Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- CATEGORY 1: PHARMACEUTICAL QUALITY -->
+            <div data-category="pharma" class="skill-category-panel glass-card p-6 flex flex-col justify-between reveal">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600 mb-4 shadow-sm">
+                  <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1 font-heading">
+                  Pharmaceutical Quality
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Industrial compliance, batch release, and rigorous regulatory documentation.
+                </p>
+
+                <!-- Skill items -->
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>GMP / BPF & GDP Compliance</span>
+                      <span class="text-sky-600">Expert</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-sky-500 to-sky-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Batch Record Evaluation & Release</span>
+                      <span class="text-sky-600">Expert</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-sky-500 to-sky-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Deviations & CAPA Management</span>
+                      <span class="text-sky-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-sky-500 to-sky-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Pharmaceutical Complaints</span>
+                      <span class="text-sky-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-sky-500 to-sky-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Line Clearances & Inspections</span>
+                      <span class="text-sky-600">Expert</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-sky-500 to-sky-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-sky-600"></i> Full EudraLex & WHO Guidelines
+              </div>
+            </div>
+
+            <!-- CATEGORY 2: QHSE MANAGEMENT -->
+            <div data-category="qhse" class="skill-category-panel glass-card p-6 flex flex-col justify-between reveal reveal-delay-1">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center text-teal-600 mb-4 shadow-sm">
+                  <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1 font-heading">
+                  Integrated QHSE
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Quality, health, workplace safety, and environmental standards alignment.
+                </p>
+
+                <!-- Skill items -->
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Integrated Management Systems</span>
+                      <span class="text-teal-600">Master Level</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Quality & Environmental Auditing</span>
+                      <span class="text-teal-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 88%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>ISO Standards (9001/14001/45001)</span>
+                      <span class="text-teal-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Risk-Oriented Thinking</span>
+                      <span class="text-teal-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 92%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Occupational Health & Safety</span>
+                      <span class="text-teal-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-teal-500 to-teal-600 h-2 rounded-full" style="width: 85%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-teal-600"></i> Master QHSE Certified
+              </div>
+            </div>
+
+            <!-- CATEGORY 3: CONTINUOUS IMPROVEMENT -->
+            <div data-category="improvement" class="skill-category-panel glass-card p-6 flex flex-col justify-between reveal reveal-delay-2">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 mb-4 shadow-sm">
+                  <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1 font-heading">
+                  Continuous Improvement
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Structured problem-solving, root-cause analysis, and action tracking.
+                </p>
+
+                <!-- Skill items -->
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>5 Whys & Ishikawa (5M/6M)</span>
+                      <span class="text-emerald-600">Expert</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>8D Problem Solving</span>
+                      <span class="text-emerald-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Process Capability & Optimization</span>
+                      <span class="text-emerald-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full" style="width: 85%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Change Control Management</span>
+                      <span class="text-emerald-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Action Plan Follow-up</span>
+                      <span class="text-emerald-600">Expert</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full" style="width: 95%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Zero-Recurrence Focused
+              </div>
+            </div>
+
+            <!-- CATEGORY 4: DIGITAL & ANALYTICAL TOOLS -->
+            <div data-category="digital" class="skill-category-panel glass-card p-6 flex flex-col justify-between reveal reveal-delay-3">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center text-cyan-600 mb-4 shadow-sm">
+                  <i data-lucide="terminal" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 mb-1 font-heading">
+                  Digital Tools
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Specialized ERP, QMS platforms, analytical chromatography software.
+                </p>
+
+                <!-- Skill items -->
+                <div class="space-y-4">
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>SAGE X3 (Pharma ERP)</span>
+                      <span class="text-cyan-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2 rounded-full" style="width: 92%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Qualipro QMS</span>
+                      <span class="text-cyan-600">Advanced</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2 rounded-full" style="width: 94%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>SAP ERP</span>
+                      <span class="text-cyan-600">Proficient</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2 rounded-full" style="width: 82%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>CHROMAS (Chromatography)</span>
+                      <span class="text-cyan-600">Proficient</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2 rounded-full" style="width: 85%;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                      <span>Microsoft Office (Excel, Word, PPT)</span>
+                      <span class="text-cyan-600">Master</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                      <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 h-2 rounded-full" style="width: 96%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-500 font-medium">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-600"></i> ALCOA+ Data Integrity Compliant
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           5. QUALITY METHODOLOGY SECTION ("MY QUALITY APPROACH")
+           =================================================================== -->
+      <section id="methodology" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-12 reveal">
+            <div class="section-badge">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+              Systematic Methodology
+            </div>
+            <h2 class="section-title">My Quality Approach</h2>
+            <p class="section-subtitle">
+              A structured continuous improvement cycle designed to transform deviations and quality anomalies into permanent process safeguards and compliant operational performance.
+            </p>
+          </div>
+
+          <!-- Interactive 6-Stage Quality Cycle Selector -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 reveal">
+            
+            <!-- Step 1 -->
+            <button class="quality-step-btn active p-4 rounded-2xl bg-white border border-sky-500 shadow-md text-left transition-all flex flex-col justify-between" data-step-index="0">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-sky-600">01</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center">
+                  <i data-lucide="search" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Identify</div>
+                <div class="text-[11px] text-slate-500">Anomaly Detection</div>
+              </div>
+            </button>
+
+            <!-- Step 2 -->
+            <button class="quality-step-btn p-4 rounded-2xl bg-white/70 border border-slate-200 text-left transition-all flex flex-col justify-between hover:bg-white" data-step-index="1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-teal-600">02</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                  <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Investigate</div>
+                <div class="text-[11px] text-slate-500">Containment & Data</div>
+              </div>
+            </button>
+
+            <!-- Step 3 -->
+            <button class="quality-step-btn p-4 rounded-2xl bg-white/70 border border-slate-200 text-left transition-all flex flex-col justify-between hover:bg-white" data-step-index="2">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-emerald-600">03</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                  <i data-lucide="git-branch" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Analyze</div>
+                <div class="text-[11px] text-slate-500">Root Cause (RCA)</div>
+              </div>
+            </button>
+
+            <!-- Step 4 -->
+            <button class="quality-step-btn p-4 rounded-2xl bg-white/70 border border-slate-200 text-left transition-all flex flex-col justify-between hover:bg-white" data-step-index="3">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-sky-600">04</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Correct</div>
+                <div class="text-[11px] text-slate-500">Immediate CAPA</div>
+              </div>
+            </button>
+
+            <!-- Step 5 -->
+            <button class="quality-step-btn p-4 rounded-2xl bg-white/70 border border-slate-200 text-left transition-all flex flex-col justify-between hover:bg-white" data-step-index="4">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-teal-600">05</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                  <i data-lucide="lock" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Prevent</div>
+                <div class="text-[11px] text-slate-500">Change Control</div>
+              </div>
+            </button>
+
+            <!-- Step 6 -->
+            <button class="quality-step-btn p-4 rounded-2xl bg-white/70 border border-slate-200 text-left transition-all flex flex-col justify-between hover:bg-white" data-step-index="5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold text-emerald-600">06</span>
+                <div class="step-icon-box w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <div>
+                <div class="text-xs font-extrabold text-slate-900 uppercase tracking-tight">Improve</div>
+                <div class="text-[11px] text-slate-500">Kaizen & PDCA</div>
+              </div>
+            </button>
+
+          </div>
+
+          <!-- Dynamic Quality Cockpit Dashboard Card -->
+          <div class="glass-card p-6 sm:p-10 border border-slate-200 shadow-xl bg-white/95 reveal">
+            
+            <!-- Dashboard Top Meta Bar -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-slate-100 mb-8">
+              <div class="flex items-center gap-3">
+                <span id="qc-step-number" class="font-mono text-xs font-extrabold px-3 py-1 rounded-md bg-sky-100 text-sky-800 tracking-wider">
+                  PHASE 01 / 06
+                </span>
+                <span id="qc-stage-badge" class="text-xs font-bold text-slate-600 px-3 py-1 rounded-md bg-slate-100">
+                  Initial Anomaly Logging
+                </span>
+              </div>
+
+              <!-- Next / Prev Quick Controls -->
+              <div class="flex items-center gap-2">
+                <button id="qc-prev-btn" class="p-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-sky-600 transition-colors" title="Previous Phase">
+                  <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <button id="qc-next-btn" class="p-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-sky-600 transition-colors" title="Next Phase">
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Main Dashboard Body Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              
+              <!-- Left Detail Column -->
+              <div class="lg:col-span-7 space-y-6">
+                <div>
+                  <h3 id="qc-stage-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading mb-1">
+                    Identify & Capture
+                  </h3>
+                  <div id="qc-stage-subtitle" class="text-sm font-semibold text-sky-700">
+                    Deviation & Incident Detection
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Operational Objective</h4>
+                  <p id="qc-stage-objective" class="text-slate-700 text-sm leading-relaxed">
+                    Timely and rigorous identification of deviations, out-of-specification (OOS) results, customer complaints, or batch discrepancies.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Primary Systems & Tools</h4>
+                  <div id="qc-stage-tools" class="flex flex-wrap gap-2">
+                    <!-- Dynamic Badges Inserted by JS -->
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Applicable Standards & Compliance</h4>
+                  <div id="qc-stage-standards" class="flex flex-wrap gap-2">
+                    <!-- Dynamic Badges Inserted by JS -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Detail Column: Real-world Deliverable & Scenario Box -->
+              <div class="lg:col-span-5 flex flex-col justify-between gap-6 p-6 rounded-2xl bg-slate-50/80 border border-slate-200/80">
+                
+                <div>
+                  <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-800 mb-2">
+                    <i data-lucide="file-check-2" class="w-4 h-4 text-sky-600"></i>
+                    Formal Quality Deliverable
+                  </div>
+                  <p id="qc-stage-deliverable" class="text-xs text-slate-700 font-medium leading-relaxed">
+                    Formally registered Deviation Dossier / Complaint Record with initial impact assessment within 24 hours.
+                  </p>
+                </div>
+
+                <!-- Case Scenario Card -->
+                <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
+                  <div class="flex items-center gap-2 text-xs font-bold text-slate-900 mb-1">
+                    <i data-lucide="briefcase" class="w-3.5 h-3.5 text-teal-600"></i>
+                    <span id="qc-scenario-title">Packaging Line Discrepancy Case</span>
+                  </div>
+                  <p id="qc-scenario-detail" class="text-xs text-slate-600 leading-relaxed">
+                    Identification of label alignment deviation during blister cartoning of solid dosage forms at SAIPH.
+                  </p>
+                </div>
+
+                <!-- Target KPI -->
+                <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-900 flex items-center gap-2">
+                  <i data-lucide="target" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                  <span id="qc-stage-kpi">Deviation Capture Speed: &lt; 24h from occurrence</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           6. PHARMACEUTICAL LABORATORY VISUAL SECTION
+           =================================================================== -->
+      <section id="environment" class="py-20 relative bg-white/60 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16 reveal">
+            <div class="section-badge">
+              <i data-lucide="flask-conical" class="w-3.5 h-3.5"></i>
+              Pharmaceutical Environment
+            </div>
+            <h2 class="section-title">Modern Laboratory & Production Landscape</h2>
+            <p class="section-subtitle">
+              A high-precision visual panorama reflecting the technical environments where Quality Assurance, GMP compliance, and biotechnology standards are executed.
+            </p>
+          </div>
+
+          <!-- 4 Visual Environment Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1: Cleanrooms -->
+            <div class="glass-card p-6 flex flex-col justify-between reveal">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4">
+                  <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-600 mb-1">Grade A to D</div>
+                <h3 class="text-base font-bold text-slate-900 mb-2 font-heading">
+                  Cleanroom & Manufacturing
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  HEPA filtration cascades, environmental monitoring, differential pressure controls, and strict line clearance procedures.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-[11px] font-semibold text-slate-500">GMP Annex 1</span>
+                <button data-env="cleanroom" class="env-inspect-btn text-xs font-semibold text-sky-600 hover:text-sky-800 flex items-center gap-1">
+                  <span>Inspect</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Analytical QC Lab -->
+            <div class="glass-card p-6 flex flex-col justify-between reveal reveal-delay-1">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-4">
+                  <i data-lucide="microscope" class="w-6 h-6"></i>
+                </div>
+                <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-teal-600 mb-1">ISO 17025 Lab</div>
+                <h3 class="text-base font-bold text-slate-900 mb-2 font-heading">
+                  Quality Control & Analytics
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  HPLC chromatography, spectrophotometry, dissolution testing, and CHROMAS analytical data evaluation.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-[11px] font-semibold text-slate-500">Ph. Eur. / USP</span>
+                <button data-env="analytics" class="env-inspect-btn text-xs font-semibold text-teal-600 hover:text-teal-800 flex items-center gap-1">
+                  <span>Inspect</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: Batch Release & Documentation -->
+            <div class="glass-card p-6 flex flex-col justify-between reveal reveal-delay-2">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+                  <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                </div>
+                <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-600 mb-1">ALCOA+ Integrity</div>
+                <h3 class="text-base font-bold text-slate-900 mb-2 font-heading">
+                  Batch Release & ERP
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Master production records, SAGE X3 consumption monitoring, Qualipro QMS verification, and QP certification.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-[11px] font-semibold text-slate-500">SAGE X3 & Qualipro</span>
+                <button data-env="batch_release" class="env-inspect-btn text-xs font-semibold text-emerald-600 hover:text-emerald-800 flex items-center gap-1">
+                  <span>Inspect</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: Biotechnology & Bioprocessing -->
+            <div class="glass-card p-6 flex flex-col justify-between reveal reveal-delay-3">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-4">
+                  <i data-lucide="dna" class="w-6 h-6"></i>
+                </div>
+                <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-600 mb-1">Biotech Standards</div>
+                <h3 class="text-base font-bold text-slate-900 mb-2 font-heading">
+                  Single-Use Bioprocessing
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                  Sartorius Stedim single-use bags, sterile filtration assemblies, fluid transfer systems, and raw-material release.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-[11px] font-semibold text-slate-500">ISO 13485 / cGMP</span>
+                <button data-env="biotech" class="env-inspect-btn text-xs font-semibold text-cyan-600 hover:text-cyan-800 flex items-center gap-1">
+                  <span>Inspect</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           7. EDUCATION, CERTIFICATIONS & LANGUAGES
+           =================================================================== -->
+      <section id="education" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16 reveal">
+            <div class="section-badge">
+              <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+              Academic & Credentials
+            </div>
+            <h2 class="section-title">Education & Certifications</h2>
+            <p class="section-subtitle">
+              Rigorous scientific and management credentials that establish a deep technical foundation in medical biotechnology and advanced QHSE governance.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+            
+            <!-- LEFT: Academic Degrees -->
+            <div class="lg:col-span-6 space-y-6 reveal">
+              <h3 class="text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
+                <i data-lucide="award" class="w-5 h-5 text-sky-600"></i>
+                Higher Education
+              </h3>
+
+              <!-- Master Degree -->
+              <div class="glass-card p-6 border-l-4 border-l-sky-600">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-800">
+                    2023 – 2025
+                  </span>
+                  <span class="text-xs font-semibold text-slate-500">Master's Degree</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-900">
+                  Master Professionnel — Management Intégré QHSE
+                </h4>
+                <div class="text-xs font-semibold text-sky-700 mb-2">
+                  Institut Supérieur des Études Technologiques de Charguia (ISET Charguia)
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Advanced mastery of Integrated Management Systems (ISO 9001, ISO 14001, ISO 45001), corporate risk assessment, legal compliance, and industrial audit methodologies.
+                </p>
+              </div>
+
+              <!-- Bachelor Degree -->
+              <div class="glass-card p-6 border-l-4 border-l-teal-600">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-100 text-teal-800">
+                    2014 – 2017
+                  </span>
+                  <span class="text-xs font-semibold text-slate-500">Applied Bachelor's</span>
+                </div>
+                <h4 class="text-base font-bold text-slate-900">
+                  Licence Appliquée — Biotechnologie Médicale, Ingénierie Moléculaire
+                </h4>
+                <div class="text-xs font-semibold text-teal-700 mb-2">
+                  Institut Supérieur des Technologies Médicales de Tunis (ISTMT)
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Comprehensive grounding in molecular biology, biochemistry, genetic engineering, laboratory quality control, and biopharmaceutical formulation principles.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- RIGHT: Certifications & Training -->
+            <div class="lg:col-span-6 space-y-6 reveal reveal-delay-1">
+              <h3 class="text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600"></i>
+                Certifications & Technical Training
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <!-- Cert 1 -->
+                <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm hover:border-sky-300 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center mb-2">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="text-xs font-bold text-slate-900">ISO 17025:2017</h4>
+                  <p class="text-[11px] text-slate-500 mt-1">General requirements for the competence of testing and calibration laboratories.</p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm hover:border-teal-300 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center mb-2">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="text-xs font-bold text-slate-900">Scientific Research Tools</h4>
+                  <p class="text-[11px] text-slate-500 mt-1">CNUDST scientific databases, bibliographic retrieval & data analysis.</p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm hover:border-emerald-300 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mb-2">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="text-xs font-bold text-slate-900">Good Manufacturing Practices</h4>
+                  <p class="text-[11px] text-slate-500 mt-1">GMP / BPF principles, sterile manufacturing Annex 1 & batch documentation.</p>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="p-4 rounded-xl bg-white border border-slate-200/80 shadow-sm hover:border-cyan-300 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-700 flex items-center justify-center mb-2">
+                    <i data-lucide="database" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="text-xs font-bold text-slate-900">Data Integrity (ALCOA+)</h4>
+                  <p class="text-[11px] text-slate-500 mt-1">Good Documentation Practices (GDP) & electronic audit trail compliance.</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- LANGUAGES SECTION -->
+          <div class="pt-8 border-t border-slate-200/60 reveal">
+            <h3 class="text-xl font-bold text-slate-900 font-heading text-center mb-8 flex items-center justify-center gap-2">
+              <i data-lucide="globe" class="w-5 h-5 text-sky-600"></i>
+              Language Proficiency
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              
+              <!-- French -->
+              <div class="glass-card p-6 text-center">
+                <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center mx-auto mb-3 font-bold text-sm">
+                  FR
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">French</h4>
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200 mb-2">
+                  Fluent / Native-level
+                </span>
+                <p class="text-xs text-slate-500">Professional pharmaceutical documentation & dossier auditing.</p>
+              </div>
+
+              <!-- English -->
+              <div class="glass-card p-6 text-center">
+                <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center mx-auto mb-3 font-bold text-sm">
+                  EN
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">English</h4>
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-800 border border-teal-200 mb-2">
+                  Fluent / Professional
+                </span>
+                <p class="text-xs text-slate-500">International biotech collaboration & scientific research.</p>
+              </div>
+
+              <!-- German -->
+              <div class="glass-card p-6 text-center">
+                <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center mx-auto mb-3 font-bold text-sm">
+                  DE
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">German</h4>
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200 mb-2">
+                  A1 Elementary
+                </span>
+                <p class="text-xs text-slate-500">Foundational language skills for European technical contexts.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           8. CONTACT SECTION ("LET'S CONNECT")
+           =================================================================== -->
+      <section id="contact" class="py-20 relative bg-gradient-to-b from-white to-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <!-- Section Header -->
+          <div class="text-center mb-16 reveal">
+            <div class="section-badge">
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              Professional Inquiry
+            </div>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">
+              Interested in pharmaceutical quality, QHSE management, continuous improvement, or exploring professional collaboration? Let's discuss how my expertise can support your operations.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto items-start">
+            
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 space-y-6 reveal">
+              
+              <div class="glass-card p-6 space-y-6">
+                <h3 class="text-lg font-bold text-slate-900 font-heading">
+                  Direct Contact Information
+                </h3>
+
+                <div class="space-y-4">
+                  
+                  <!-- Email -->
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                      <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs font-semibold text-slate-500">Direct Email</div>
+                      <a href="mailto:nermine.touati.contact@gmail.com" class="text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors">
+                        nermine.touati.contact@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Professional Role -->
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
+                      <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs font-semibold text-slate-500">Specialization</div>
+                      <div class="text-sm font-bold text-slate-900">
+                        Chargée Assurance Qualité & QHSE
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                      <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs font-semibold text-slate-500">Location & Mobility</div>
+                      <div class="text-sm font-bold text-slate-900">
+                        Tunisia &bull; Open to International Opportunities
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Action buttons -->
+                <div class="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full justify-center text-xs sm:text-sm !py-2.5">
+                    <i data-lucide="linkedin" class="w-4 h-4 text-sky-700"></i>
+                    <span>Connect on LinkedIn</span>
+                  </a>
+                  <button class="download-vcard-btn btn-secondary w-full justify-center text-xs sm:text-sm !py-2.5">
+                    <i data-lucide="download" class="w-4 h-4 text-teal-600"></i>
+                    <span>Save Contact Card (vCard)</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Right Interactive Contact Form -->
+            <div class="lg:col-span-7 reveal reveal-delay-1">
+              <div class="glass-card p-6 sm:p-8 bg-white shadow-xl">
+                
+                <h3 class="text-xl font-bold text-slate-900 font-heading mb-1">
+                  Send a Message
+                </h3>
+                <p class="text-xs text-slate-500 mb-6">
+                  Fill in the details below and I will respond to your professional inquiry promptly.
+                </p>
+
+                <form id="contact-form" class="space-y-4">
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="contact-name" class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name</label>
+                      <input type="text" id="contact-name" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 outline-hidden text-sm transition-all" placeholder="e.g. Dr. Jean Dupont">
+                    </div>
+
+                    <div>
+                      <label for="contact-email" class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                      <input type="email" id="contact-email" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 outline-hidden text-sm transition-all" placeholder="jean.dupont@pharma-corp.com">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="contact-subject" class="block text-xs font-semibold text-slate-700 mb-1">Subject / Area of Interest</label>
+                    <select id="contact-subject" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 outline-hidden text-sm bg-white transition-all">
+                      <option value="quality-role">Pharmaceutical Quality / QA Opportunity</option>
+                      <option value="qhse">QHSE Management & Auditing</option>
+                      <option value="consulting">Continuous Improvement & CAPA Consultation</option>
+                      <option value="other">General Professional Collaboration</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="contact-message" class="block text-xs font-semibold text-slate-700 mb-1">Message</label>
+                    <textarea id="contact-message" rows="4" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-100 outline-hidden text-sm transition-all" placeholder="Please describe your organization, requirements, or inquiry..."></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-primary w-full justify-center !py-3 shadow-md">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Transmit Message</span>
+                  </button>
+
+                </form>
+
+                <!-- Success Toast -->
+                <div id="contact-success-toast" class="hidden opacity-0 transform translate-y-2 transition-all duration-300 mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs flex items-center gap-2">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                  <span>Thank you! Your message has been prepared and transmitted successfully.</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-sm">
+              NT
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 font-heading">Nermine Touati</div>
+              <div class="text-xs text-slate-500">Pharmaceutical Quality & QHSE Professional</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-slate-500 text-center md:text-right">
+            <div>Precision &bull; Quality &bull; Science &bull; Continuous Improvement</div>
+            <div class="mt-1">&copy; 2026 Nermine Touati. All rights reserved.</div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-white/90 text-sky-700 shadow-lg border border-slate-200 hover:bg-sky-50 transition-all opacity-0 pointer-events-none translate-y-4" aria-label="Scroll to top">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- ===================================================================
+       MODAL 1: PHARMA ENVIRONMENT DEEP DIVE MODAL
+       =================================================================== -->
+  <div id="env-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm">
+    <div class="glass-card max-w-xl w-full p-6 sm:p-8 bg-white relative shadow-2xl animate-float">
+      
+      <button id="env-modal-close" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-2 mb-2">
+        <span id="env-modal-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sky-100 text-sky-800">
+          Standard
+        </span>
+      </div>
+
+      <h3 id="env-modal-title" class="text-xl font-bold text-slate-900 font-heading mb-3">
+        Environment Title
+      </h3>
+
+      <p id="env-modal-desc" class="text-xs text-slate-600 leading-relaxed mb-6">
+        Description
+      </p>
+
+      <div class="mb-6">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Core Technical Specifications</h4>
+        <ul id="env-modal-points" class="space-y-2">
+          <!-- Dynamic List items inserted by JS -->
+        </ul>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+        <span class="text-slate-500">Governing Standards:</span>
+        <span id="env-modal-standards" class="font-bold text-sky-700">GMP Annex 1</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 2: EXECUTIVE CV & PRINTABLE RESUME DOSSIER
+       =================================================================== -->
+  <div id="cv-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm overflow-y-auto">
+    <div class="glass-card max-w-3xl w-full p-6 sm:p-10 bg-white relative shadow-2xl my-8 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Top Action Bar (No Print) -->
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-6 no-print">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-sky-600"></i>
+          <span class="text-sm font-bold text-slate-900 font-heading">Executive Resume Dossier</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <button id="cv-print-btn" class="btn-primary text-xs !py-1.5 !px-3">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button id="cv-modal-close" class="p-1.5 text-slate-400 hover:text-slate-600">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable CV Content -->
+      <div class="space-y-6 text-slate-800">
+        
+        <!-- CV Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">Nermine Touati</h1>
+            <div class="text-sm font-bold text-sky-700 mt-1">Pharmaceutical Quality & QHSE Professional</div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 sm:mt-0 sm:text-right space-y-0.5">
+            <div>Email: nermine.touati.contact@gmail.com</div>
+            <div>Specialization: GMP/BPF, CAPA, Batch Release</div>
+            <div>Languages: French (Fluent), English (Fluent), German (A1)</div>
+          </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-sky-900 mb-1 border-b border-sky-100 pb-1">
+            Executive Profile
+          </h2>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Quality professional combining pharmaceutical technical expertise, QHSE management, GMP knowledge, and continuous improvement to support reliable, compliant, and efficient pharmaceutical operations. Demonstrated success at SAIPH, TERIAK, and Sartorius Stedim BIOTECH in batch certification, deviation management, root-cause investigations, and quality system administration (SAGE X3, Qualipro).
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-sky-900 mb-2 border-b border-sky-100 pb-1">
+            Professional Experience
+          </h2>
+
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-900">
+                <span>Chargée Assurance Qualité — Laboratoires SAIPH</span>
+                <span class="text-slate-500">Aug 2022 – Present</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-0.5">
+                Batch dossier evaluation, manufacturing & packaging documentation, batch release planning, material consumption monitoring using SAGE X3, Qualipro QMS inspection reports, pharmaceutical complaint investigations, and root-cause analysis.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-900">
+                <span>Chargée Qualité Production — Laboratoires TERIAK</span>
+                <span class="text-slate-500">Aug 2021 – Aug 2022</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-0.5">
+                Deviations management, customer complaints, root-cause investigations (5 Whys, Ishikawa), CAPA follow-up, operator quality awareness & training, change management, and internal audits.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-900">
+                <span>Chargée Qualité Libération Produits — Sartorius Stedim BIOTECH</span>
+                <span class="text-slate-500">Biotechnology Quality</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-0.5">
+                Raw-material release, semi-finished and finished-product release, batch certification, GMP/BPF compliance, cleanroom inspections, deviation monitoring, and inter-site complaints.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-sky-900 mb-2 border-b border-sky-100 pb-1">
+            Education
+          </h2>
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between">
+              <div><strong>Master's Degree — Integrated QHSE Management</strong> &bull; ISET Charguia</div>
+              <span class="text-slate-500">2023 – 2025</span>
+            </div>
+            <div class="flex justify-between">
+              <div><strong>Applied Bachelor's Degree — Medical Biotechnology, Molecular Engineering</strong> &bull; ISTMT</div>
+              <span class="text-slate-500">2014 – 2017</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills & Certifications -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-sky-900 mb-1 border-b border-sky-100 pb-1">
+              Core Skills & Tools
+            </h2>
+            <p class="text-[11px] text-slate-700 leading-relaxed">
+              GMP/BPF, CAPA, Root-Cause Analysis (5 Whys, Ishikawa, 8D), SAGE X3, Qualipro, SAP, CHROMAS, ISO 9001/14001/45001, Data Integrity (ALCOA+).
+            </p>
+          </div>
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-wider text-sky-900 mb-1 border-b border-sky-100 pb-1">
+              Certifications
+            </h2>
+            <p class="text-[11px] text-slate-700 leading-relaxed">
+              ISO 17025:2017 Laboratory Management, Scientific Research Tools (CNUDST), Good Manufacturing & Documentation Practices (GMP/GDP).
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom Javascript Files -->
+  <script src="js/canvas-molecules.js"></script>
+  <script src="js/quality-cycle.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

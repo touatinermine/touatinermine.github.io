@@ -1,8 +1,3 @@
-/**
- * NERMINE TOUATI - ULTRA-MODERN PHARMACEUTICAL PORTFOLIO
- * app.js - Advanced Interactions, 3D Tilt, Role Cycler, Stats Counter, & Bilingual Support
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
@@ -21,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "Amélioration Continue & CAPA (RCA)"
   ];
   const rolesEn = [
-    "Quality & Quality Assurance Professional",
-    "Integrated QHSE & GMP Compliance Specialist",
+    "Quality & Quality Assurance Specialist",
+    "Integrated QHSE & GMP Compliance Lead",
     "Batch Release & Master Production Records",
     "Medical Biotechnology & Molecular Engineering",
     "Continuous Improvement & CAPA (RCA)"
@@ -233,67 +228,143 @@ END:VCARD`;
     });
   });
 
-  // 10. Bilingual Language Switcher (FR / EN)
-  const langBtns = document.querySelectorAll('.lang-toggle-btn');
-  
+  // 10. Comprehensive Bilingual Translation Dictionary (FR / EN)
   const translations = {
     fr: {
+      brand_sub: "Qualité Pharmaceutique • QHSE",
       nav_home: "Accueil",
       nav_profil: "Profil",
       nav_exp: "Expériences",
       nav_edu: "Cursus",
       nav_train: "Formations",
-      nav_skills: "Logiciels",
-      nav_lang: "Langues",
+      nav_skills: "Logiciels & Langues",
       nav_contact: "Contact",
+      btn_exp: "Consulter les Expériences",
       btn_contact: "Me Contacter",
       hero_badge: "INNOVATION PHARMACEUTIQUE • QUALITÉ & QHSE • BPF/GMP",
-      hero_summary: "Professionnelle polyvalente combinant expertise technique dans le domaine pharmaceutique et qualités humaines, je m'épanouis dans des environnements dynamiques où l'innovation et l'amélioration continue sont au cœur des enjeux. Ma capacité d'adaptation me permet d'accompagner efficacement les organisations dans leurs démarches qualité les plus exigeantes.",
-      exp_badge: "Parcours Professionnel",
-      exp_title: "Expériences Professionnelles",
-      edu_badge: "Diplômes & Études",
-      edu_title: "Cursus Académique",
-      train_badge: "Certifications & Normes",
-      train_title: "Formations",
-      skills_badge: "Systèmes & Outils",
-      skills_title: "Logiciels Maîtrisés",
-      lang_badge: "Communication",
-      lang_title: "Langues",
-      contact_badge: "Coordonnées",
-      contact_title: "Contact & Coordonnées",
-      send_btn: "Transmettre le message"
+      hero_scope: "Périmètre :",
+      hero_tools: "Outils QMS & ERP :",
+      stat_entities: "Laboratoires & Biotech",
+      stat_compliance: "Conformité BPF / GMP",
+      stat_tools: "Logiciels ERP & QMS",
+      stat_degrees: "Mastère & Ing. Moléculaire",
+      profil_title: "PROFIL",
+      exp_title: "EXPÉRIENCES PROFESSIONNELLES",
+      exp_teriak_title: "Chargée qualité production",
+      exp_teriak_company: "Les laboratoires TERIAK",
+      exp_teriak_dates: "Août 2022 – présent",
+      exp_saiph_title: "Chargée Assurance qualité",
+      exp_saiph_company: "Société Arabe des Industries Pharmaceutiques SAIPH",
+      exp_saiph_dates: "Août 2021 – Août 2022",
+      exp_sartorius_title: "Chargée qualité libération produits",
+      exp_sartorius_company: "Sartorius Stedim BIOTECH",
+      exp_sartorius_dates: "Février 2019 – Février 2021",
+      edu_title: "CURSUS ACADÉMIQUE",
+      train_title: "FORMATIONS",
+      train_1_title: "Management des laboratoires ISO17025 V 2017",
+      train_1_sub: "Exigences de compétence & systèmes d'essais",
+      train_2_title: "Formation sur les outils à valeur contribuant au cycle de recherche scientifique",
+      train_2_sub: "Par le centre CNUDST",
+      train_3_title: "Formations sur les bonnes pratiques de fabrication et bonnes pratiques documentaires",
+      train_3_sub: "BPF (GMP) & BPD (GDP)",
+      train_4_title: "Formation sur l’intégrité des données",
+      train_4_sub: "Data Integrity (ALCOA+)",
+      skills_title: "LOGICIELS MAÎTRISÉS",
+      badge_mastered: "Maîtrisé",
+      lang_title: "LANGUES",
+      lang_fr_name: "Français",
+      lang_fr_level: "Lu, parlé et écrit",
+      lang_en_name: "Anglais",
+      lang_en_level: "Lu, parlé et écrit",
+      lang_de_name: "Allemand",
+      lang_de_level: "A1",
+      lang_doc_label: "Rédaction BPF & Documentation",
+      lang_doc_val: "Français / Anglais",
+      lang_coord_label: "Coordination Inter-Sites & Audits",
+      lang_coord_val: "Professionnel",
+      contact_title: "CONTACT & COORDONNÉES",
+      contact_email_label: "Email Professionnel",
+      contact_linkedin_label: "Profil LinkedIn",
+      input_name_placeholder: "Votre nom",
+      input_email_placeholder: "Votre email",
+      input_msg_placeholder: "Votre message...",
+      vcard_btn: "Enregistrer le contact (vCard)",
+      send_btn: "Transmettre le message",
+      toast_success: "Message préparé avec succès !",
+      footer_tag: "Qualité Pharmaceutique • QHSE • BPF (GMP) • Amélioration Continue",
+      footer_rights: "Tous droits réservés."
     },
     en: {
+      brand_sub: "Pharmaceutical Quality • QHSE",
       nav_home: "Home",
       nav_profil: "Profile",
       nav_exp: "Experience",
       nav_edu: "Education",
       nav_train: "Certifications",
-      nav_skills: "Software",
-      nav_lang: "Languages",
+      nav_skills: "Skills & Languages",
       nav_contact: "Contact",
+      btn_exp: "View Experience",
       btn_contact: "Contact Me",
       hero_badge: "PHARMACEUTICAL INNOVATION • QUALITY & QHSE • GMP",
-      hero_summary: "Versatile professional combining technical expertise in the pharmaceutical field with strong human qualities. I thrive in dynamic environments where innovation and continuous improvement are essential. My adaptability enables me to effectively support organizations in their most demanding quality initiatives.",
-      exp_badge: "Career Journey",
-      exp_title: "Professional Experience",
-      edu_badge: "Academic Degrees",
-      edu_title: "Education",
-      train_badge: "Certifications & Standards",
-      train_title: "Professional Training",
-      skills_badge: "Systems & Tools",
-      skills_title: "Software & Digital Systems",
-      lang_badge: "Communication",
-      lang_title: "Languages",
-      contact_badge: "Get in Touch",
-      contact_title: "Contact Information",
-      send_btn: "Send Message"
+      hero_scope: "Scope:",
+      hero_tools: "QMS & ERP Tools:",
+      stat_entities: "Pharma Labs & Biotech",
+      stat_compliance: "GMP / BPF Compliance",
+      stat_tools: "ERP & QMS Software",
+      stat_degrees: "Master's & Molecular Eng.",
+      profil_title: "PROFILE",
+      exp_title: "PROFESSIONAL EXPERIENCE",
+      exp_teriak_title: "Production Quality Officer",
+      exp_teriak_company: "TERIAK Laboratories",
+      exp_teriak_dates: "August 2022 – Present",
+      exp_saiph_title: "Quality Assurance Officer",
+      exp_saiph_company: "SAIPH (Arab Pharmaceutical Industries)",
+      exp_saiph_dates: "August 2021 – August 2022",
+      exp_sartorius_title: "Product Release Quality Officer",
+      exp_sartorius_company: "Sartorius Stedim BIOTECH",
+      exp_sartorius_dates: "February 2019 – February 2021",
+      edu_title: "ACADEMIC BACKGROUND",
+      train_title: "TRAINING & CERTIFICATIONS",
+      train_1_title: "Laboratory Management ISO17025 V 2017",
+      train_1_sub: "Competence requirements & testing systems",
+      train_2_title: "Training on scientific research tools contributing to research lifecycle",
+      train_2_sub: "By CNUDST Center",
+      train_3_title: "Good Manufacturing Practices & Good Documentation Practices",
+      train_3_sub: "GMP & GDP Compliance",
+      train_4_title: "Data Integrity Training",
+      train_4_sub: "Data Integrity (ALCOA+)",
+      skills_title: "SOFTWARE & DIGITAL TOOLS",
+      badge_mastered: "Proficient",
+      lang_title: "LANGUAGES",
+      lang_fr_name: "French",
+      lang_fr_level: "Read, spoken & written (Fluent)",
+      lang_en_name: "English",
+      lang_en_level: "Read, spoken & written (Fluent)",
+      lang_de_name: "German",
+      lang_de_level: "A1 (Elementary)",
+      lang_doc_label: "GMP & Technical Documentation",
+      lang_doc_val: "French / English",
+      lang_coord_label: "Inter-Site Coordination & Audits",
+      lang_coord_val: "Professional",
+      contact_title: "CONTACT INFORMATION",
+      contact_email_label: "Professional Email",
+      contact_linkedin_label: "LinkedIn Profile",
+      input_name_placeholder: "Your name",
+      input_email_placeholder: "Your email",
+      input_msg_placeholder: "Your message...",
+      vcard_btn: "Save Contact Card (vCard)",
+      send_btn: "Send Message",
+      toast_success: "Message prepared successfully!",
+      footer_tag: "Pharmaceutical Quality • QHSE • GMP • Continuous Improvement",
+      footer_rights: "All rights reserved."
     }
   };
 
   function setLanguage(lang) {
     currentLang = lang;
-    langBtns.forEach(btn => {
+    
+    // Update active button state
+    document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
       if (btn.getAttribute('data-lang') === lang) {
         btn.classList.add('active');
       } else {
@@ -302,6 +373,8 @@ END:VCARD`;
     });
 
     const dict = translations[lang] || translations.fr;
+
+    // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
@@ -309,7 +382,16 @@ END:VCARD`;
       }
     });
 
-    // Toggle content items
+    // Update form placeholders
+    const nameInput = document.getElementById('contact-name-input');
+    const emailInput = document.getElementById('contact-email-input');
+    const msgInput = document.getElementById('contact-msg-input');
+
+    if (nameInput && dict.input_name_placeholder) nameInput.placeholder = dict.input_name_placeholder;
+    if (emailInput && dict.input_email_placeholder) emailInput.placeholder = dict.input_email_placeholder;
+    if (msgInput && dict.input_msg_placeholder) msgInput.placeholder = dict.input_msg_placeholder;
+
+    // Toggle content blocks (paragraphs and bullet lists)
     document.querySelectorAll('[data-lang-content]').forEach(el => {
       if (el.getAttribute('data-lang-content') === lang) {
         el.classList.remove('hidden');
@@ -318,17 +400,20 @@ END:VCARD`;
       }
     });
 
-    // Refresh dynamic tagline immediately
+    // Update dynamic tagline text immediately
     if (taglineEl) {
       const list = currentLang === 'fr' ? rolesFr : rolesEn;
       taglineEl.textContent = list[currentRoleIdx % list.length];
     }
   }
 
-  langBtns.forEach(btn => {
+  document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selectedLang = btn.getAttribute('data-lang');
       setLanguage(selectedLang);
     });
   });
+
+  // Default to French
+  setLanguage('fr');
 });
